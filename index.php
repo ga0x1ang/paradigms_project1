@@ -156,7 +156,7 @@ function fill_states()
                 $items = get_items($database);
                 display_items($items);
             ?>
-            <a>Address: </a>
+            <a>Address:</a><input type="text" placeholder="Input your address here ...">
             <br>
             <a>State: </a>
             <select id="state" class="span2">
