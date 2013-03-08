@@ -12,7 +12,7 @@
  */
 function db_connect()
 {
-    $database = mysqli_connect("localhost", "root", "password", "website");
+    $database = mysqli_connect("localhost", "root", "URpu55y!", "website");
 
     if(mysqli_connect_errno($conn))
     {
@@ -130,6 +130,10 @@ function fill_states()
 
             function reset()
             {
+                $(":checkbox").each(function(){this.checked=false; $("#quantity" + this.id).remove();});
+                $("#costVal").remove();
+                $("#taxVal").remove();
+                $("#totalVal").remove();
             }
 
             function calculate()
@@ -143,9 +147,9 @@ function fill_states()
                 $("#taxVal").remove();
                 $("#totalVal").remove();
 
-                $("#cost").after("<a id=\"costVal\">" + cost + "</a>");
-                $("#tax").after("<a id=\"taxVal\">" + tax + "</a>");
-                $("#total").after("<a id=\"totalVal\">" + (cost + tax) + "</a>");
+                $("#cost").after("<a id=\"costVal\">" + cost.toFixed(2) + "</a>");
+                $("#tax").after("<a id=\"taxVal\">" + tax.toFixed(2) + "</a>");
+                $("#total").after("<a id=\"totalVal\">" + (cost + tax).toFixed(2) + "</a>");
             }
         </script>
     </head>
