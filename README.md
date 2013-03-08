@@ -1,8 +1,15 @@
 paradigms_project1
 ==================
-Configuraton & Run
+**(important)** paradigms.pdf is the paper on JavaScript
+
+**(required)** website.sql is the database file, MySQL server needed to import this file.
+
+**(optional)** apache.conf is the configuration file for apache server.
+
+**Configuraton & Run**
 
 Environment:
+
 Linux / Mysql / Apache2 / PHP
 
 1. import website.sql into database ( database named 'website' or using your own name)
