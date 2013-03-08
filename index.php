@@ -12,7 +12,7 @@
  */
 function db_connect()
 {
-    $database = mysqli_connect("localhost", "root", "URpu55y!", "website");
+    $database = mysqli_connect("localhost", "root", "password", "website");
 
     if(mysqli_connect_errno($conn))
     {
